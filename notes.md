@@ -94,3 +94,9 @@ Nesting comprehensions means that each time the inner comprehension is run, it r
     List.flatten(cards)
   end
 First solve is to use the built in flatten method.
+
+  for suit <- suits, value <- values do 
+    "#{value} of #{suit}"
+  end
+
+Second solve, 'double upped' the comprehension
