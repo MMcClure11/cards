@@ -113,3 +113,9 @@ Pattern Matching: Elixir's replacement for variable assignment
   Elixir notices that we have a tuple on the left and right, because the data structure and number of elements exactly match for both sides, it knows to assign that variable name
   We create a mirror structure and number of elements for Elixir to pattern match against
 Pattern Matching is used anytime the = sign is used
+[ color1, color2 ] = ["red", "blue"]
+color1 => "red"
+colors = ["red", "blue"]
+colors => ["red", "blue"]
+[ color1, color2, color3 ] = ["red", "blue"]
+color3 => throws error, color3 is undefined
