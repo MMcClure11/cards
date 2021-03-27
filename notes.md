@@ -126,3 +126,5 @@ Elixir is a dialect of Erlang, to get away from the annoying syntax of Erlang, m
 BEAM is the virtual machine that executes the Erlang code
 
 when working with file system we actually have to use Erlang as opposed to Elixir
+invoke Erlang with :erlang
+we are able to save a deck as a binary object to the file system
