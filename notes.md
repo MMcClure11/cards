@@ -195,7 +195,7 @@ Two types of tests
   - any examples you have in your module or function docs, the Elixir test will run the code in the example as if it were real, and check that the outcome matches
   - doc testing is amazingly productive, get great testing and documentation in one fell swoop
 
-  A Few Side Topics:
+A Few Side Topics:
   Maps: key value pairs, nearly identical to ruby hashes or javascript objects
 
 iex(3)> colors = %{primary: "red", secondary: "blue"}
@@ -228,3 +228,30 @@ iex(12)> Map.put(colors, :secondary_color, "green")
 %{primary: "red", secondary_color: "green"}
 
 We can use Map.put to add a new key with a value.
+
+Key word Lists
+Lists are like arrays, they are for any arbitrary length we can have as many elements as we want.
+Keyword Lists merge the two data structures into one.
+Tuples are like arrays, where each index has a special meaning to us.
+Make a list with two tuples, get back a list that looks like a map with key value pairs.
+Internally, Elixir scrolls through to find the key, and returns the value. But internally it's treating it like a tuple, not a map.
+
+iex(1)> colors = [{:primary, "red"}, {:secondary, "green"}]
+[primary: "red", secondary: "green"]
+iex(2)> colors[:primary]
+"red"
+
+Can also be written as:
+iex(3)> colors = [primary: "red", secondary: "blue"]
+[primary: "red", secondary: "blue"]
+
+With maps, cannot repeat a key. With a Keyword List you can:
+iex(4)> colors = [primary: "red", primary: "blue"]
+[primary: "red", primary: "blue"]
+iex(5)> colors = %{ primary: "red", primary: "blue"}
+%{primary: "blue"}
+
+We might use Keyword Lists in the context of searching for a query where we want do establish two values:
+iex> query = User.find_where([where: user.age > 10, where: user.subscribed == true])
+You may also see them written like this when it is the only argument being passed into a function, note: it still reads it as ONE argument with a Keyword List
+iex> query = User.find_where where: user.age > 10, where: user.subscribed == true
