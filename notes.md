@@ -16,3 +16,10 @@ The elixir shell does not automatically recompile:
 $ recompile
 
 To close the shell, ctrl + C twice
+
+Design:
+
+Elixir is a Functional Programming language
+a module has no idea about what a class or an instance variable is, they do not exist
+Modules are collections of methods which you can call on primitive data types to return some kind of result
+
