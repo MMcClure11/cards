@@ -182,3 +182,4 @@ $ cd doc
 $ open index.html
 
 In browser creates beautiful documentation that looks very similar to Elixir's official documentation
+Adding documentation for an Example requires very specific spacing, see deal example.
