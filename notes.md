@@ -68,3 +68,9 @@ iex(12)> Cards.contains?(deck, "Ace")
 true
 iex(13)> Cards.contains?(deck, "King")
 false
+
+-----------
+List Comprehension - how we run a for loop in Elixir
+For every element in the list, do this thing 
+The syntax for a comprehension is a mapping function
+For every element in the suits array, we run the do block, and whatever is returned from that do block gets put into a brand new array
