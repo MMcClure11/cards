@@ -54,3 +54,17 @@ iex(10)>
 
 Immutability in Elixir:
 we never modify an existing data structure in place, we always make a NEW data structure
+
+------------
+In Elixir it is convention to include a question mark at the end of a method name if it is expected to return a boolean, it doesn't not actually affect behavior
+
+https://hexdocs.pm/elixir/Enum.html#member?/2
+iex(10)> recompile  
+Compiling 1 file (.ex)
+:ok
+iex(11)> deck = Cards.create_deck
+["Ace", "Two", "Three"]
+iex(12)> Cards.contains?(deck, "Ace")
+true
+iex(13)> Cards.contains?(deck, "King")
+false
