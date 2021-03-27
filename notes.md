@@ -23,3 +23,11 @@ Elixir is a Functional Programming language
 a module has no idea about what a class or an instance variable is, they do not exist
 Modules are collections of methods which you can call on primitive data types to return some kind of result
 
+Shuffle: error troubleshooting - If you call Cards.shuffle() without an argument passed in you get the following error:
+function Cards.shuffle/0 is undefined or private. Did you mean one of:
+
+      * shuffle/1
+
+which means that it expected one argument but got none, this is because in Elixir you 
+can have methods by the same name that take in different numbers of arguments
+
