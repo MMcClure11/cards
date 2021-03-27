@@ -107,7 +107,7 @@ For example, in our deal method
 Enum.split(deck, hand_size) -> { [My hand], [The rest of the cards] }
 My hand will always be at index 0, and the rest of the cards will always be at index 1
 
-3/27/21
+3/27/21 - 1 hour, Sections 18-24
 Pattern Matching: Elixir's replacement for variable assignment
 { hand, rest_of_deck } = Cards.deal(deck, 5)  
   Elixir notices that we have a tuple on the left and right, because the data structure and number of elements exactly match for both sides, it knows to assign that variable name
@@ -170,3 +170,15 @@ Whatever is applied from the previous function, will be used as the first argume
   end
 then to add it, $ mix deps.get
 Had to install Hex, selected Y
+
+DOCUMENTATION
+$ mix docs 
+generates:
+Compiling 1 file (.ex)
+Generating docs...
+View "html" docs at "doc/index.html"
+View "epub" docs at "doc/cards.epub"
+$ cd doc
+$ open index.html
+
+In browser creates beautiful documentation that looks very similar to Elixir's official documentation
