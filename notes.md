@@ -100,3 +100,9 @@ First solve is to use the built in flatten method.
   end
 
 Second solve, 'double upped' the comprehension
+
+--------------
+A tuple is like an array, but each index has a very special meaning, to the developers that wrote it
+For example, in our deal method 
+Enum.split(deck, hand_size) -> { [My hand], [The rest of the cards] }
+My had will always be at index 0, and the rest of the cards will always be at index 1
