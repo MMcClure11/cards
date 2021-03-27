@@ -145,3 +145,7 @@ More on Pattern Matching: if on the left hand side you have a hard coded value, 
 
 Note that here with the tuple, of :ok, binary we are actually performing two operations, it is using the atom :ok to find which tuple, and assigning the second part of the tuple to binary due to pattern matching
 For :error, _reason, the variable is not used so if we have 'reason' we get a warning of an unused variable, but we can't remove it because then the pattern match fails, so in Elixir we can add an _ to indicate that we know there will be a variable here, but we're not going to use it.
+
+The Pipe Operator
+Requires that you use methods that use the same first argument throughout
+Whatever is applied from the previous function, will be used as the first argument of the next function
