@@ -107,7 +107,7 @@ For example, in our deal method
 Enum.split(deck, hand_size) -> { [My hand], [The rest of the cards] }
 My hand will always be at index 0, and the rest of the cards will always be at index 1
 
-3/27/21 - 1 hour, Sections 18-24, 1 hour Sections 25-31
+3/27/21 - 1 hour, Sections 18-24, 1 hour Sections 25-31, 10 min Sections 32-33
 Pattern Matching: Elixir's replacement for variable assignment
 { hand, rest_of_deck } = Cards.deal(deck, 5)  
   Elixir notices that we have a tuple on the left and right, because the data structure and number of elements exactly match for both sides, it knows to assign that variable name
