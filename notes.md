@@ -126,6 +126,22 @@ Elixir is a dialect of Erlang, to get away from the annoying syntax of Erlang, m
 BEAM is the virtual machine that executes the Erlang code
 
 when working with file system we actually have to use Erlang as opposed to Elixir
-invoke Erlang with :erlang
+invoke the Erlang library with :erlang
 we are able to save a deck as a binary object to the file system
 In Elixir when we want to make checks we try to avoid if statements and more often rely on case statements which are a combo of checks and pattern matching
+
+In Elixir :ok, :error are examples of primitive data types called atoms, used for handling control flows, errors, messages, you can think of them as strings
+
+More on Pattern Matching: if on the left hand side you have a hard coded value, Elixir requires that the right hand side have an identical value
+["red", color] = ["green", "blue"] //=> returns an error
+["red", color] = ["red", "blue"] //=> success
+
+  def load(filename) do 
+    case File.read(filename) do 
+      {:ok, binary} -> :erlang.binary_to_term binary
+      {:error, _reason} -> "That file does not exist"
+    end
+  end
+
+Note that here with the tuple, of :ok, binary we are actually performing two operations, it is using the atom :ok to find which tuple, and assigning the second part of the tuple to binary due to pattern matching
+For :error, _reason, the variable is not used so if we have 'reason' we get a warning of an unused variable, but we can't remove it because then the pattern match fails, so in Elixir we can add an _ to indicate that we know there will be a variable here, but we're not going to use it.
