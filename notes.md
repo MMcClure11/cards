@@ -107,7 +107,7 @@ For example, in our deal method
 Enum.split(deck, hand_size) -> { [My hand], [The rest of the cards] }
 My hand will always be at index 0, and the rest of the cards will always be at index 1
 
-3/27/21 - 1 hour, Sections 18-24
+3/27/21 - 1 hour, Sections 18-24, 1 hour Sections 25-31
 Pattern Matching: Elixir's replacement for variable assignment
 { hand, rest_of_deck } = Cards.deal(deck, 5)  
   Elixir notices that we have a tuple on the left and right, because the data structure and number of elements exactly match for both sides, it knows to assign that variable name
@@ -194,3 +194,37 @@ Two types of tests
 2. Doc Testing
   - any examples you have in your module or function docs, the Elixir test will run the code in the example as if it were real, and check that the outcome matches
   - doc testing is amazingly productive, get great testing and documentation in one fell swoop
+
+  A Few Side Topics:
+  Maps: key value pairs, nearly identical to ruby hashes or javascript objects
+
+iex(3)> colors = %{primary: "red", secondary: "blue"}
+%{primary: "red", secondary: "blue"}
+iex(4)> colors.secondary
+"blue"
+iex(5)> %{secondary: secondary_color} = colors
+%{primary: "red", secondary: "blue"}
+iex(6)> secondary_color
+"blue"
+
+When reading from maps, you can use dot notation or pattern matching.
+Updating maps -> we have to create new map with the value changed
+https://hexdocs.pm/elixir/Map.html#put/3
+iex(7)> colors = %{primary: "red"}
+%{primary: "red"}
+iex(8)> Map.put(colors, :primary, "blue")
+%{primary: "blue"}
+
+Map.put takes in 3 args, the map, the key you want to change the value of as an atom, and the new value. Note: it does NOT change the original map, it creates a new one.
+
+iex(10)> %{ colors | primary: "blue" }
+%{primary: "blue"}
+iex(11)> colors
+%{primary: "red"}
+
+This syntax can ONLY be used when we are updating an existing key, can't add a new one.
+
+iex(12)> Map.put(colors, :secondary_color, "green")
+%{primary: "red", secondary_color: "green"}
+
+We can use Map.put to add a new key with a value.
