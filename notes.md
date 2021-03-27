@@ -128,3 +128,4 @@ BEAM is the virtual machine that executes the Erlang code
 when working with file system we actually have to use Erlang as opposed to Elixir
 invoke Erlang with :erlang
 we are able to save a deck as a binary object to the file system
+In Elixir when we want to make checks we try to avoid if statements and more often rely on case statements which are a combo of checks and pattern matching
