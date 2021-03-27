@@ -187,3 +187,9 @@ Adding documentation for an Example requires very specific spacing, see deal exa
 TESTING
 Building the project comes with a robust testing suite
 $ mix test
+
+Two types of tests
+1. testing a singular and particular fact using an assertion
+2. Doc Testing
+  - any examples you have in your module or function docs, the Elixir test will run the code in the example as if it were real, and check that the outcome matches
+  - doc testing is amazingly productive, get great testing and documentation in one fell swoop
