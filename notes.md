@@ -80,4 +80,17 @@ For every element in the suits array, we run the do block, and whatever is retur
         "#{value} of #{suit}"
       end
     end
-Nesting comprehensions means that each time the inner comprehension is run, it returns an array of its data, so we get back an array of arrays for each pass of the inner comprehesion, which is not what we want.
+Nesting comprehensions means that each time the inner comprehension is run, it returns an array of its data, so we get back an array of arrays for each pass of the inner comprehesion, which is not what we want. Note we are not actually working with arrays, we are ACTUALLY working with linked Lists.
+
+  def create_deck do 
+    values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]
+    suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
+
+    cards = for value <- values do 
+      for suit <- suits do 
+        "#{value} of #{suit}"
+      end
+    end
+    List.flatten(cards)
+  end
+First solve is to use the built in flatten method.
