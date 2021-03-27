@@ -1,4 +1,4 @@
-3/26/21
+3/26/21 - Approx 2 hours, sections 1-18
 To Create a Project:
 $ mix new name-of-project
 
@@ -105,4 +105,11 @@ Second solve, 'double upped' the comprehension
 A tuple is like an array, but each index has a very special meaning, to the developers that wrote it
 For example, in our deal method 
 Enum.split(deck, hand_size) -> { [My hand], [The rest of the cards] }
-My had will always be at index 0, and the rest of the cards will always be at index 1
+My hand will always be at index 0, and the rest of the cards will always be at index 1
+
+3/27/21
+Pattern Matching: Elixir's replacement for variable assignment
+{ hand, rest_of_deck } = Cards.deal(deck, 5)  
+  Elixir notices that we have a tuple on the left and right, because the data structure and number of elements exactly match for both sides, it knows to assign that variable name
+  We create a mirror structure and number of elements for Elixir to pattern match against
+Pattern Matching is used anytime the = sign is used
