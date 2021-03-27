@@ -9,5 +9,10 @@ iex : works just like irb for ruby, runs the shell
 
 Elixir has an implicit return, the last value in a function will automatically be returned.
 
-To run your file: 
+To run your file in the elixir interactive shell: 
 $ iex -S mix
+
+The elixir shell does not automatically recompile:
+$ recompile
+
+To close the shell, ctrl + C twice
