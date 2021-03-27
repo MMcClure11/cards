@@ -119,3 +119,10 @@ colors = ["red", "blue"]
 colors => ["red", "blue"]
 [ color1, color2, color3 ] = ["red", "blue"]
 color3 => throws error, color3 is undefined
+
+Elixir's Relationship with Erlang
+Code we write is fed into Elixir, which is transpiled into Erlang, then its compiled and executed as BEAM (Bogdan Erlang Abstract Machine)
+Elixir is a dialect of Erlang, to get away from the annoying syntax of Erlang, makes it easier for programmers
+BEAM is the virtual machine that executes the Erlang code
+
+when working with file system we actually have to use Erlang as opposed to Elixir
