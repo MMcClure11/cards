@@ -183,3 +183,7 @@ $ open index.html
 
 In browser creates beautiful documentation that looks very similar to Elixir's official documentation
 Adding documentation for an Example requires very specific spacing, see deal example.
+
+TESTING
+Building the project comes with a robust testing suite
+$ mix test
