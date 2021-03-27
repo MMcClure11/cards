@@ -74,3 +74,10 @@ List Comprehension - how we run a for loop in Elixir
 For every element in the list, do this thing 
 The syntax for a comprehension is a mapping function
 For every element in the suits array, we run the do block, and whatever is returned from that do block gets put into a brand new array
+
+    for value <- values do 
+      for suit <- suits do 
+        "#{value} of #{suit}"
+      end
+    end
+Nesting comprehensions means that each time the inner comprehension is run, it returns an array of its data, so we get back an array of arrays for each pass of the inner comprehesion, which is not what we want.
