@@ -48,3 +48,9 @@ iex(7)> Cards.shuffle(deck)
 ["Two", "Three", "Ace"]
 iex(8)> Cards.shuffle(deck)
 ["Ace", "Three", "Two"]
+iex(9)> deck
+["Ace", "Two", "Three"]
+iex(10)> 
+
+Immutability in Elixir:
+we never modify an existing data structure in place, we always make a NEW data structure
