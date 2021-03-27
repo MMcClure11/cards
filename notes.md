@@ -149,3 +149,12 @@ For :error, _reason, the variable is not used so if we have 'reason' we get a wa
 The Pipe Operator
 Requires that you use methods that use the same first argument throughout
 Whatever is applied from the previous function, will be used as the first argument of the next function
+  def create_hand(hand_size) do 
+    #deck = Cards.create_deck
+    #deck = Cards.shuffle(deck)
+    #hand = Cards.deal(deck, hand_size)
+
+    Cards.create_deck
+      |> Cards.shuffle
+      |> Cards.deal(hand_size)
+  end
